@@ -8,10 +8,12 @@ added.
 
 This project was initially created because NSXMLParser is not
 streaming. It requires the full XML data to be present before it can
-parse. his project builds on the expat XML parser and provides parse:
+parse.
+
+The XMLParser builds on the expat XML parser and provides parse:
 parsePartial: and parseFinal: methods to deal with XML content that
-you might not completely have.
+you might not completely have. For example because you are receiving
+it on a socket.
 
-The NSXMLDigester is modelled after the Apache Commons Digester
+The XMLDigester is modelled after the Apache Commons Digester
 code. It allows you to easily map XML to objects.
-
