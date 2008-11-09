@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<foo name="The Parent">
+  <bar isbn="123" title="The First Child"/>
+  <bar isbn="456" title="The Second Child"/>
+</foo>

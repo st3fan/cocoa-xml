@@ -1,0 +1,17 @@
+Cocoa XML - Stefan Arentz, 2008-11-09
+
+*Introduction*
+
+This project contains alternatives for Cocoa's NSXMLParser. This is
+work in progress. Documentation, unit tests and examples need to be
+added.
+
+This project was initially created because NSXMLParser is not
+streaming. It requires the full XML data to be present before it can
+parse. his project builds on the expat XML parser and provides parse:
+parsePartial: and parseFinal: methods to deal with XML content that
+you might not completely have.
+
+The NSXMLDigester is modelled after the Apache Commons Digester
+code. It allows you to easily map XML to objects.
+

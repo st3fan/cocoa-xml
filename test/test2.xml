@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<html xmlns="http://www.w3.org/HTML/1998/html4" xmlns:xdc="http://www.xml.com/books">
+ <head><title>Book Review</title></head>
+ <body>
+  <xdc:bookreview>
+   <xdc:title>XML: A Primer</xdc:title>
+   <table>
+    <tr align="center">
+     <td>Author</td><td>Price</td>
+     <td>Pages</td><td>Date</td></tr>
+    <tr align="left">
+     <td><xdc:author>Simon St. Laurent</xdc:author></td>
+     <td><xdc:price>31.98</xdc:price></td>
+     <td><xdc:pages>352</xdc:pages></td>
+     <td><xdc:date>1998/01</xdc:date></td>
+    </tr>
+   </table>
+  </xdc:bookreview>
+ </body>
+</html>
