@@ -19,7 +19,7 @@
 
 #include <objc/runtime.h>
 
-#import "XMLDigesterCallMethodRule.h"
+#import "XMLDigesterCallMethodWithElementBodyRule.h"
 #import "XMLDigester.h"
 
 @implementation XMLDigesterCallMethodWithElementBodyRule
