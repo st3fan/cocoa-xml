@@ -29,6 +29,7 @@
       rulesByPath_ = [[NSMutableDictionary dictionary] retain];
       stack_ = [[NSMutableArray array] retain];
       path_ = [[NSMutableArray array] retain];
+      body_ = [[NSMutableString string] retain];
    }
    return self;
 }
@@ -122,6 +123,9 @@
 {
    [path_ addObject: element];
 
+   // Reset the body when a new element starts
+   [body_ setString: @""];
+
    NSArray* rules = [rulesByPath_ objectForKey: path_];
    if (rules != nil) {
       for (XMLDigesterRule* rule in rules) {
@@ -134,12 +138,23 @@
 {
    NSArray* rules = [rulesByPath_ objectForKey: path_];
    if (rules != nil) {
+      // If this is a 'quick close' of an element then run the registered Rules' didBody: methods
+      if ([element isEqualToString: [path_ lastObject]]) {
+         for (XMLDigesterRule* rule in rules) {
+            [rule didBody: [NSString stringWithString: body_]];
+         }
+      }
       for (XMLDigesterRule* rule in [rules reverseObjectEnumerator]) {
          [rule didEndElement: element];
       }
    }
 
    [path_ removeLastObject];
+}
+
+- (void) parser: (XMLParser*) parser foundCharacters: (NSString*) string
+{
+   [body_ appendString: string];
 }
 
 @end

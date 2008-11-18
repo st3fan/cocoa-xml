@@ -18,39 +18,19 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "XMLParser.h"
+#import "XMLDigesterRule.h"
 
-#import "XMLDigesterObjectCreateRule.h"
-#import "XMLDigesterSetPropertiesRule.h"
-#import "XMLDigesterSetNextRule.h"
-#import "XMLDigesterCallMethodWithElementBodyRule.h"
+/**
+ * Rule implementation that set a property of the object at the top
+ * of the stack, based on the current element body.
+ */
 
-@class XMLDigesterRule;
+@class XMLDigester;
 
-@interface XMLDigester : NSObject {
+@interface XMLDigesterCallMethodWithElementBodyRule : XMLDigesterRule {
    @private
-      XMLParser* parser_;
-      NSMutableDictionary* rulesByPath_;
-      NSMutableArray* stack_;
-      NSMutableArray* path_;
-      id object_;
-      NSMutableString* body_;
+      SEL selector_;
 }
-
-- (id) init;
-+ (id) digester;
-
-- (NSArray*) stack;
-
-- (void) pushObject: (id) object;
-- (id) popObject;
-- (id) peekObject;
-- (id) peekObjectAtIndex: (NSUInteger) index;
-
-- (void) addRule: (XMLDigesterRule*) rule forPattern: (NSString*) pattern;
-
-- (id) parseData: (NSData*) data;
-- (void) parsePartialData: (NSData*) data;
-- (id) parseFinalData: (NSData*) data;
-
+- (id) initWithDigester: (XMLDigester*) digester selector: (SEL) selector;
++ (id) callMethodWithElementBodyRuleWithDigester: (XMLDigester*) digester selector: (SEL) selector;
 @end

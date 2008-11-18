@@ -17,40 +17,29 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
-#import "XMLParser.h"
+#include <objc/runtime.h>
 
-#import "XMLDigesterObjectCreateRule.h"
-#import "XMLDigesterSetPropertiesRule.h"
-#import "XMLDigesterSetNextRule.h"
-#import "XMLDigesterCallMethodWithElementBodyRule.h"
+#import "XMLDigesterCallMethodRule.h"
+#import "XMLDigester.h"
 
-@class XMLDigesterRule;
+@implementation XMLDigesterCallMethodWithElementBodyRule
 
-@interface XMLDigester : NSObject {
-   @private
-      XMLParser* parser_;
-      NSMutableDictionary* rulesByPath_;
-      NSMutableArray* stack_;
-      NSMutableArray* path_;
-      id object_;
-      NSMutableString* body_;
+- (id) initWithDigester: (XMLDigester*) digester selector: (SEL) selector
+{
+   if ((self = [super initWithDigester: digester]) != nil) {
+      selector_ = selector;
+   }
+   return self;
 }
 
-- (id) init;
-+ (id) digester;
++ (id) callMethodWithElementBodyRuleWithDigester: (XMLDigester*) digester selector: (SEL) selector
+{
+   return [[[self alloc] initWithDigester: digester selector: selector] autorelease];
+}
 
-- (NSArray*) stack;
-
-- (void) pushObject: (id) object;
-- (id) popObject;
-- (id) peekObject;
-- (id) peekObjectAtIndex: (NSUInteger) index;
-
-- (void) addRule: (XMLDigesterRule*) rule forPattern: (NSString*) pattern;
-
-- (id) parseData: (NSData*) data;
-- (void) parsePartialData: (NSData*) data;
-- (id) parseFinalData: (NSData*) data;
+- (void) didBody: (NSString*) body
+{
+   [[[self digester] peekObjectAtIndex: 0] performSelector: selector_ withObject: body];
+}
 
 @end
