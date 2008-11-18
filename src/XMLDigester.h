@@ -20,11 +20,6 @@
 #import <Foundation/Foundation.h>
 #import "XMLParser.h"
 
-#import "XMLDigesterObjectCreateRule.h"
-#import "XMLDigesterSetPropertiesRule.h"
-#import "XMLDigesterSetNextRule.h"
-#import "XMLDigesterCallMethodWithElementBodyRule.h"
-
 @class XMLDigesterRule;
 
 @interface XMLDigester : NSObject {
@@ -52,5 +47,10 @@
 - (id) parseData: (NSData*) data;
 - (void) parsePartialData: (NSData*) data;
 - (id) parseFinalData: (NSData*) data;
+
+- (void) addObjectCreateRuleWithClass: (id) class forPattern: (NSString*) pattern;
+- (void) addCallMethodWithElementBodyRuleWithSelector: (SEL) selector forPattern: (NSString*) pattern;
+- (void) addCallMethodRuleWithSelector: (SEL) selector forPattern: (NSString*) pattern;
+- (void) addCallParamRuleWithParameterIndex: (NSUInteger) index forPattern: (NSString*) pattern;
 
 @end

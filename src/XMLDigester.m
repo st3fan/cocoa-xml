@@ -20,6 +20,11 @@
 #import <Foundation/Foundation.h>
 #import "XMLDigester.h"
 
+#import "XMLDigesterObjectCreateRule.h"
+#import "XMLDigesterCallMethodWithElementBodyRule.h"
+#import "XMLDigesterCallMethodRule.h"
+#import "XMLDigesterCallParamRule.h"
+
 @implementation XMLDigester
 
 - (id) init
@@ -155,6 +160,26 @@
 - (void) parser: (XMLParser*) parser foundCharacters: (NSString*) string
 {
    [body_ appendString: string];
+}
+
+- (void) addObjectCreateRuleWithClass: (id) class forPattern: (NSString*) pattern
+{
+   [self addRule: [XMLDigesterObjectCreateRule objectCreateRuleWithDigester: self class: class] forPattern: pattern];   
+}
+
+- (void) addCallMethodWithElementBodyRuleWithSelector: (SEL) selector forPattern: (NSString*) pattern
+{
+   [self addRule: [XMLDigesterCallMethodWithElementBodyRule callMethodWithElementBodyRuleWithDigester: self selector: selector] forPattern: pattern];
+}
+
+- (void) addCallMethodRuleWithSelector: (SEL) selector forPattern: (NSString*) pattern
+{
+   [self addRule: [XMLDigesterCallMethodRule callMethodRuleWithDigester: self selector: selector] forPattern: pattern];
+}
+
+- (void) addCallParamRuleWithParameterIndex: (NSUInteger) index forPattern: (NSString*) pattern
+{
+   [self addRule: [XMLDigesterCallParamRule callParamRuleWithDigester: self parameterIndex: index] forPattern: pattern];
 }
 
 @end
