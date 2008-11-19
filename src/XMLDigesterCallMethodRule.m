@@ -37,10 +37,32 @@
 
 - (void) didStartElement: (NSString*) elementName attributes: (NSDictionary*) attributeDict
 {
+   NSMutableArray* array = [NSMutableArray array];
+   for (int i = 0; i < 2; i++) {
+      [array addObject: [NSNull null]];
+   }
+   [[self digester] pushObject: array];
 }
 
 - (void) didEndElement: (NSString*) elementName
 {
+   NSMutableArray* array = [[self digester] popObject];
+   id object = [[self digester] peekObjectAtIndex: 0];
+
+   NSMethodSignature* methodSignature = [object methodSignatureForSelector: selector_];
+   if (methodSignature)
+   {
+      NSInvocation* invocation = [NSInvocation invocationWithMethodSignature: methodSignature];
+      [invocation setTarget: object];
+      [invocation setSelector: selector_];
+
+      NSInteger i = 2;
+      for (id parameter in array) {
+         [invocation setArgument: &parameter atIndex: i++];
+      }
+      
+      [invocation invoke];
+   }
 }
 
 - (void) didBody: (NSString*) body
