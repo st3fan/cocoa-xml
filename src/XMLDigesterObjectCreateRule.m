@@ -42,7 +42,7 @@
 
 - (void) didEndElement: (NSString*) elementName
 {
-   id object = [[self digester] popObject];
+   /* id object = */ [[self digester] popObject];
 }
 
 @end

@@ -18,7 +18,6 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "XMLParser.h"
 
 @class XMLDigester;
 

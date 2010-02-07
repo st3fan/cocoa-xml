@@ -26,6 +26,7 @@
    if ((self = [super init]) != nil) {
       digester_ = [digester retain];
    }
+   return self;
 }
 
 - (XMLDigester*) digester

@@ -18,13 +18,12 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "XMLParser.h"
 
 @class XMLDigesterRule;
 
 @interface XMLDigester : NSObject {
    @private
-      XMLParser* parser_;
+      NSXMLParser* parser_;
       NSMutableDictionary* rulesByPath_;
       NSMutableArray* stack_;
       NSMutableArray* path_;
@@ -32,8 +31,8 @@
       NSMutableString* body_;
 }
 
-- (id) init;
-+ (id) digester;
+- (id) initWithData: (NSData*) data;
++ (id) digesterWithData: (NSData*) data;
 
 - (NSArray*) stack;
 
@@ -44,9 +43,7 @@
 
 - (void) addRule: (XMLDigesterRule*) rule forPattern: (NSString*) pattern;
 
-- (id) parseData: (NSData*) data;
-- (void) parsePartialData: (NSData*) data;
-- (id) parseFinalData: (NSData*) data;
+- (id) digest;
 
 - (void) addObjectCreateRuleWithClass: (id) class forPattern: (NSString*) pattern;
 - (void) addCallMethodWithElementBodyRuleWithSelector: (SEL) selector forPattern: (NSString*) pattern;

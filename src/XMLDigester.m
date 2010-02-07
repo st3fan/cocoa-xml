@@ -18,8 +18,8 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "XMLDigester.h"
 
+#import "XMLDigester.h"
 #import "XMLDigesterObjectCreateRule.h"
 #import "XMLDigesterCallMethodWithElementBodyRule.h"
 #import "XMLDigesterCallMethodRule.h"
@@ -27,10 +27,13 @@
 
 @implementation XMLDigester
 
-- (id) init
+- (id) initWithData: (NSData*) data
 {
-   if ((self = [super init]) != nil) {
-      parser_ = [[XMLParser parserWithDelegate: self] retain];
+   if ((self = [super init]) != nil)
+   {
+      parser_ = [[NSXMLParser alloc] initWithData: data];
+	  [parser_ setDelegate: self];
+	  
       rulesByPath_ = [[NSMutableDictionary dictionary] retain];
       stack_ = [[NSMutableArray array] retain];
       path_ = [[NSMutableArray array] retain];
@@ -39,18 +42,19 @@
    return self;
 }
 
++ (id) digesterWithData: (NSData*) data
+{
+	return [[[self alloc] initWithData: data] autorelease];
+}
+
 - (void) dealloc
 {
    [path_ release];
    [stack_ release];
    [rulesByPath_ release];
    [object_ release];
+   [parser_ release];
    [super dealloc];
-}
-
-+ (id) digester
-{
-   return [[[self alloc] init] autorelease];
 }
 
 - (NSArray*) stack
@@ -107,24 +111,15 @@
    [rules addObject: rule];
 }
 
-- (id) parseData: (NSData*) data
+- (id) digest
 {
-   [parser_ parseData: data];
-   return object_;
+	[parser_ parse];
+	return object_;
 }
 
-- (void) parsePartialData: (NSData*) data
-{
-   [parser_ parsePartialData: data];
-}
+#pragma mark -
 
-- (id) parseFinalData: (NSData*) data
-{
-   [parser_ parseFinalData: data];
-   return object_;
-}
-
-- (void) parser: (XMLParser*) parser didStartElement: (NSString*) element attributes: (NSDictionary*) attributes
+- (void) parser: (NSXMLParser*) parser didStartElement: (NSString*) element namespaceURI: (NSString*) namespaceURI qualifiedName: (NSString*) qualifiedName attributes: (NSDictionary*) attributes
 {
    [path_ addObject: element];
 
@@ -139,7 +134,7 @@
    }
 }
 
-- (void) parser: (XMLParser*) parser didEndElement: (NSString*) element
+- (void) parser: (NSXMLParser*) parser didEndElement: (NSString*) element namespaceURI: (NSString*) namespaceURI qualifiedName: (NSString*) qName
 {
    NSArray* rules = [rulesByPath_ objectForKey: path_];
    if (rules != nil) {
@@ -157,10 +152,12 @@
    [path_ removeLastObject];
 }
 
-- (void) parser: (XMLParser*) parser foundCharacters: (NSString*) string
+- (void) parser: (NSXMLParser*) parser foundCharacters: (NSString*) characters
 {
-   [body_ appendString: string];
+   [body_ appendString: characters];
 }
+
+#pragma mark -
 
 - (void) addObjectCreateRuleWithClass: (id) class forPattern: (NSString*) pattern
 {
