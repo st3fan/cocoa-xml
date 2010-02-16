@@ -21,9 +21,32 @@
 #import "XMLDigesterRule.h"
 
 /**
- * Rule implementation that calls a method on the (top-1) (parent)
- * object, passing the top object (child) as an argument. It is
- * commonly used to establish parent-child relationships.
+ * Rule implementation that calls a method on the (top-1) (parent) object, passing the top
+ * object (child) as an argument. It is commonly used to establish parent-child relationships.
+ *
+ * Example usage
+ *
+ *  Assume the following XML:
+ *
+ *    <people>
+ *      <person></person>
+ *      <person></person>
+ *    </people>
+ *
+ *  The following digester configuration will parse the names into Name entities and add use
+ *  this rule to add them to a top level names array:
+ *
+ *    // This rule will create the top level object on the stack, a mutable array
+ *    [digester addRule: [XMLDigesterObjectCreateRule objectCreateRuleWithDigester: digester
+ *      class: [NSMutableArray class]] forPattern: @"people"];
+ *
+ *    // This rule will create a new Person instance and put it on the stack
+ *    [digester addRule: [XMLDigesterObjectCreateRule objectCreateRuleWithDigester: digester
+ *      class: [Person class]] forPattern: @"people/person"];
+ *
+ *    // This rule will call the addObject: method on the top level object
+ *    [digester addRule: [XMLDigesterSetNextRule setNextRuleWithDigester: digester
+ *      selector: @selector(addObject:)] forPattern: @"people/person"];
  */
 
 @class XMLDigester;

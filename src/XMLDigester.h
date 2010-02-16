@@ -19,6 +19,13 @@
 
 #import <Foundation/Foundation.h>
 
+#import "XMLDigesterObjectCreateRule.h"
+#import "XMLDigesterCallMethodWithElementBodyRule.h"
+#import "XMLDigesterCallMethodRule.h"
+#import "XMLDigesterCallParamRule.h"
+#import "XMLDigesterSetNextRule.h"
+#import "XMLDigesterSetPropertyRule.h"
+
 @class XMLDigesterRule;
 
 @interface XMLDigester : NSObject {

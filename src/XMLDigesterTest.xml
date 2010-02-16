@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<people>
+  <person id="1">
+    <name>Ringo Starr</name>
+	<city-of-birth>Liverpool</city-of-birth>
+	<luckyNumber>10</luckyNumber>
+  </person>
+  <person id="2">
+    <name>George Harrison</name>
+	<city-of-birth>Liverpool</city-of-birth>
+	<luckyNumber>20</luckyNumber>
+  </person>
+  <person id="3">
+    <name>John Lennon</name>
+	<city-of-birth>Liverpool</city-of-birth>
+	<luckyNumber>30</luckyNumber>
+  </person>
+  <person id="4">
+    <name>Paul McCartney</name>
+	<city-of-birth>Liverpool</city-of-birth>
+	<luckyNumber>40</luckyNumber>
+  </person>
+</people>

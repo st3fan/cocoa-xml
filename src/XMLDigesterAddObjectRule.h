@@ -21,16 +21,17 @@
 #import "XMLDigesterRule.h"
 
 /**
- * Rule implementation that calls a method of the object at the top
- * of the stack with one argument, the element text body.
+ * Rule implementation that calls the addObject: method on the (top-1) (parent) object, passing
+ * the top object (child) as an argument. It is commonly used to establish parent-child relationships
+ * using Cocoa standard collection classes like NSMutableArray or NSMutableSet.
  */
 
 @class XMLDigester;
 
-@interface XMLDigesterCallMethodWithElementBodyRule : XMLDigesterRule {
+@interface XMLDigesterAddObjectRule : XMLDigesterRule {
    @private
-      SEL selector_;
+      NSString* property_;
 }
-- (id) initWithDigester: (XMLDigester*) digester selector: (SEL) selector;
-+ (id) callMethodWithElementBodyRuleWithDigester: (XMLDigester*) digester selector: (SEL) selector;
+- (id) initWithDigester: (XMLDigester*) digester property: (NSString*) property;
++ (id) addObjectRuleWithDigester: (XMLDigester*) digester property: (NSString*) property;
 @end

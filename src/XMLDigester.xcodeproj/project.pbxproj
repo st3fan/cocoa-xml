@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA747D9F0F9514B9006C5449 /* XMLDigester_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* XMLDigester_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		F840F136111F8E570076A317 /* XMLDigester.h in Headers */ = {isa = PBXBuildFile; fileRef = F840F120111F8E570076A317 /* XMLDigester.h */; };
+		F840F137111F8E570076A317 /* XMLDigester.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F121111F8E570076A317 /* XMLDigester.m */; };
+		F840F138111F8E570076A317 /* XMLDigesterCallMethodRule.h in Headers */ = {isa = PBXBuildFile; fileRef = F840F122111F8E570076A317 /* XMLDigesterCallMethodRule.h */; };
+		F840F139111F8E570076A317 /* XMLDigesterCallMethodRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F123111F8E570076A317 /* XMLDigesterCallMethodRule.m */; };
+		F840F13A111F8E570076A317 /* XMLDigesterCallMethodWithAttributeRule.h in Headers */ = {isa = PBXBuildFile; fileRef = F840F124111F8E570076A317 /* XMLDigesterCallMethodWithAttributeRule.h */; };
+		F840F13B111F8E570076A317 /* XMLDigesterCallMethodWithAttributeRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F125111F8E570076A317 /* XMLDigesterCallMethodWithAttributeRule.m */; };
+		F840F13C111F8E570076A317 /* XMLDigesterCallMethodWithElementBodyRule.h in Headers */ = {isa = PBXBuildFile; fileRef = F840F126111F8E570076A317 /* XMLDigesterCallMethodWithElementBodyRule.h */; };
+		F840F13D111F8E570076A317 /* XMLDigesterCallMethodWithElementBodyRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F127111F8E570076A317 /* XMLDigesterCallMethodWithElementBodyRule.m */; };
+		F840F13E111F8E570076A317 /* XMLDigesterCallParamRule.h in Headers */ = {isa = PBXBuildFile; fileRef = F840F128111F8E570076A317 /* XMLDigesterCallParamRule.h */; };
+		F840F13F111F8E570076A317 /* XMLDigesterCallParamRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F129111F8E570076A317 /* XMLDigesterCallParamRule.m */; };
+		F840F140111F8E570076A317 /* XMLDigesterObjectCreateRule.h in Headers */ = {isa = PBXBuildFile; fileRef = F840F12A111F8E570076A317 /* XMLDigesterObjectCreateRule.h */; };
+		F840F141111F8E570076A317 /* XMLDigesterObjectCreateRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F12B111F8E570076A317 /* XMLDigesterObjectCreateRule.m */; };
+		F840F142111F8E570076A317 /* XMLDigesterRule.h in Headers */ = {isa = PBXBuildFile; fileRef = F840F12C111F8E570076A317 /* XMLDigesterRule.h */; };
+		F840F143111F8E570076A317 /* XMLDigesterRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F12D111F8E570076A317 /* XMLDigesterRule.m */; };
+		F840F144111F8E570076A317 /* XMLDigesterSetNextRule.h in Headers */ = {isa = PBXBuildFile; fileRef = F840F12E111F8E570076A317 /* XMLDigesterSetNextRule.h */; };
+		F840F145111F8E570076A317 /* XMLDigesterSetNextRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F12F111F8E570076A317 /* XMLDigesterSetNextRule.m */; };
+		F840F146111F8E570076A317 /* XMLDigesterSetPropertiesRule.h in Headers */ = {isa = PBXBuildFile; fileRef = F840F130111F8E570076A317 /* XMLDigesterSetPropertiesRule.h */; };
+		F840F147111F8E570076A317 /* XMLDigesterSetPropertiesRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F131111F8E570076A317 /* XMLDigesterSetPropertiesRule.m */; };
+		F840F148111F8E570076A317 /* XMLDigesterSetPropertyRule.h in Headers */ = {isa = PBXBuildFile; fileRef = F840F132111F8E570076A317 /* XMLDigesterSetPropertyRule.h */; };
+		F840F149111F8E570076A317 /* XMLDigesterSetPropertyRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F133111F8E570076A317 /* XMLDigesterSetPropertyRule.m */; };
+		F840F16C111FA7E60076A317 /* XMLDigesterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F16B111FA7E60076A317 /* XMLDigesterTest.m */; };
+		F840F176111FA91A0076A317 /* XMLDigesterTest.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840F175111FA91A0076A317 /* XMLDigesterTest.xml */; };
+		F840F18A111FAB400076A317 /* XMLDigester.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F121111F8E570076A317 /* XMLDigester.m */; };
+		F840F18D111FAB4F0076A317 /* XMLDigesterCallMethodRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F123111F8E570076A317 /* XMLDigesterCallMethodRule.m */; };
+		F840F18E111FAB4F0076A317 /* XMLDigesterCallMethodWithAttributeRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F125111F8E570076A317 /* XMLDigesterCallMethodWithAttributeRule.m */; };
+		F840F18F111FAB4F0076A317 /* XMLDigesterCallMethodWithElementBodyRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F127111F8E570076A317 /* XMLDigesterCallMethodWithElementBodyRule.m */; };
+		F840F190111FAB4F0076A317 /* XMLDigesterCallParamRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F129111F8E570076A317 /* XMLDigesterCallParamRule.m */; };
+		F840F191111FAB4F0076A317 /* XMLDigesterObjectCreateRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F12B111F8E570076A317 /* XMLDigesterObjectCreateRule.m */; };
+		F840F192111FAB4F0076A317 /* XMLDigesterRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F12D111F8E570076A317 /* XMLDigesterRule.m */; };
+		F840F193111FAB4F0076A317 /* XMLDigesterSetNextRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F12F111F8E570076A317 /* XMLDigesterSetNextRule.m */; };
+		F840F194111FAB4F0076A317 /* XMLDigesterSetPropertiesRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F131111F8E570076A317 /* XMLDigesterSetPropertiesRule.m */; };
+		F840F195111FAB4F0076A317 /* XMLDigesterSetPropertyRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F133111F8E570076A317 /* XMLDigesterSetPropertyRule.m */; };
+		F840F1CF111FB2060076A317 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F1CE111FB2060076A317 /* Person.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA747D9E0F9514B9006C5449 /* XMLDigester_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDigester_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libXMLDigester.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXMLDigester.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F840F120111F8E570076A317 /* XMLDigester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDigester.h; sourceTree = "<group>"; };
+		F840F121111F8E570076A317 /* XMLDigester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDigester.m; sourceTree = "<group>"; };
+		F840F122111F8E570076A317 /* XMLDigesterCallMethodRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDigesterCallMethodRule.h; sourceTree = "<group>"; };
+		F840F123111F8E570076A317 /* XMLDigesterCallMethodRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDigesterCallMethodRule.m; sourceTree = "<group>"; };
+		F840F124111F8E570076A317 /* XMLDigesterCallMethodWithAttributeRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDigesterCallMethodWithAttributeRule.h; sourceTree = "<group>"; };
+		F840F125111F8E570076A317 /* XMLDigesterCallMethodWithAttributeRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDigesterCallMethodWithAttributeRule.m; sourceTree = "<group>"; };
+		F840F126111F8E570076A317 /* XMLDigesterCallMethodWithElementBodyRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDigesterCallMethodWithElementBodyRule.h; sourceTree = "<group>"; };
+		F840F127111F8E570076A317 /* XMLDigesterCallMethodWithElementBodyRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDigesterCallMethodWithElementBodyRule.m; sourceTree = "<group>"; };
+		F840F128111F8E570076A317 /* XMLDigesterCallParamRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDigesterCallParamRule.h; sourceTree = "<group>"; };
+		F840F129111F8E570076A317 /* XMLDigesterCallParamRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDigesterCallParamRule.m; sourceTree = "<group>"; };
+		F840F12A111F8E570076A317 /* XMLDigesterObjectCreateRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDigesterObjectCreateRule.h; sourceTree = "<group>"; };
+		F840F12B111F8E570076A317 /* XMLDigesterObjectCreateRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDigesterObjectCreateRule.m; sourceTree = "<group>"; };
+		F840F12C111F8E570076A317 /* XMLDigesterRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDigesterRule.h; sourceTree = "<group>"; };
+		F840F12D111F8E570076A317 /* XMLDigesterRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDigesterRule.m; sourceTree = "<group>"; };
+		F840F12E111F8E570076A317 /* XMLDigesterSetNextRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDigesterSetNextRule.h; sourceTree = "<group>"; };
+		F840F12F111F8E570076A317 /* XMLDigesterSetNextRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDigesterSetNextRule.m; sourceTree = "<group>"; };
+		F840F130111F8E570076A317 /* XMLDigesterSetPropertiesRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDigesterSetPropertiesRule.h; sourceTree = "<group>"; };
+		F840F131111F8E570076A317 /* XMLDigesterSetPropertiesRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDigesterSetPropertiesRule.m; sourceTree = "<group>"; };
+		F840F132111F8E570076A317 /* XMLDigesterSetPropertyRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDigesterSetPropertyRule.h; sourceTree = "<group>"; };
+		F840F133111F8E570076A317 /* XMLDigesterSetPropertyRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDigesterSetPropertyRule.m; sourceTree = "<group>"; };
+		F840F160111FA7A40076A317 /* XMLDigesterTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XMLDigesterTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F840F161111FA7A40076A317 /* XMLDigesterTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XMLDigesterTest-Info.plist"; sourceTree = "<group>"; };
+		F840F16A111FA7E60076A317 /* XMLDigesterTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDigesterTest.h; sourceTree = "<group>"; };
+		F840F16B111FA7E60076A317 /* XMLDigesterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDigesterTest.m; sourceTree = "<group>"; };
+		F840F175111FA91A0076A317 /* XMLDigesterTest.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = XMLDigesterTest.xml; sourceTree = "<group>"; };
+		F840F1CD111FB2060076A317 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		F840F1CE111FB2060076A317 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F840F15D111FA7A40076A317 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libXMLDigester.a */,
+				F840F160111FA7A40076A317 /* XMLDigesterTest.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* XMLDigester */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				F840F169111FA7D30076A317 /* Test */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+				F840F161111FA7A40076A317 /* XMLDigesterTest-Info.plist */,
+			);
+			name = XMLDigester;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F840F120111F8E570076A317 /* XMLDigester.h */,
+				F840F121111F8E570076A317 /* XMLDigester.m */,
+				F840F122111F8E570076A317 /* XMLDigesterCallMethodRule.h */,
+				F840F123111F8E570076A317 /* XMLDigesterCallMethodRule.m */,
+				F840F124111F8E570076A317 /* XMLDigesterCallMethodWithAttributeRule.h */,
+				F840F125111F8E570076A317 /* XMLDigesterCallMethodWithAttributeRule.m */,
+				F840F126111F8E570076A317 /* XMLDigesterCallMethodWithElementBodyRule.h */,
+				F840F127111F8E570076A317 /* XMLDigesterCallMethodWithElementBodyRule.m */,
+				F840F128111F8E570076A317 /* XMLDigesterCallParamRule.h */,
+				F840F129111F8E570076A317 /* XMLDigesterCallParamRule.m */,
+				F840F12A111F8E570076A317 /* XMLDigesterObjectCreateRule.h */,
+				F840F12B111F8E570076A317 /* XMLDigesterObjectCreateRule.m */,
+				F840F12C111F8E570076A317 /* XMLDigesterRule.h */,
+				F840F12D111F8E570076A317 /* XMLDigesterRule.m */,
+				F840F12E111F8E570076A317 /* XMLDigesterSetNextRule.h */,
+				F840F12F111F8E570076A317 /* XMLDigesterSetNextRule.m */,
+				F840F130111F8E570076A317 /* XMLDigesterSetPropertiesRule.h */,
+				F840F131111F8E570076A317 /* XMLDigesterSetPropertiesRule.m */,
+				F840F132111F8E570076A317 /* XMLDigesterSetPropertyRule.h */,
+				F840F133111F8E570076A317 /* XMLDigesterSetPropertyRule.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* XMLDigester_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		F840F169111FA7D30076A317 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				F840F16A111FA7E60076A317 /* XMLDigesterTest.h */,
+				F840F16B111FA7E60076A317 /* XMLDigesterTest.m */,
+				F840F175111FA91A0076A317 /* XMLDigesterTest.xml */,
+				F840F1CD111FB2060076A317 /* Person.h */,
+				F840F1CE111FB2060076A317 /* Person.m */,
+			);
+			name = Test;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* XMLDigester_Prefix.pch in Headers */,
+				F840F136111F8E570076A317 /* XMLDigester.h in Headers */,
+				F840F138111F8E570076A317 /* XMLDigesterCallMethodRule.h in Headers */,
+				F840F13A111F8E570076A317 /* XMLDigesterCallMethodWithAttributeRule.h in Headers */,
+				F840F13C111F8E570076A317 /* XMLDigesterCallMethodWithElementBodyRule.h in Headers */,
+				F840F13E111F8E570076A317 /* XMLDigesterCallParamRule.h in Headers */,
+				F840F140111F8E570076A317 /* XMLDigesterObjectCreateRule.h in Headers */,
+				F840F142111F8E570076A317 /* XMLDigesterRule.h in Headers */,
+				F840F144111F8E570076A317 /* XMLDigesterSetNextRule.h in Headers */,
+				F840F146111F8E570076A317 /* XMLDigesterSetPropertiesRule.h in Headers */,
+				F840F148111F8E570076A317 /* XMLDigesterSetPropertyRule.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* XMLDigester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "XMLDigester" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XMLDigester;
+			productName = XMLDigester;
+			productReference = D2AAC07E0554694100DB518D /* libXMLDigester.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F840F15F111FA7A40076A317 /* XMLDigesterTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F840F164111FA7A50076A317 /* Build configuration list for PBXNativeTarget "XMLDigesterTest" */;
+			buildPhases = (
+				F840F15B111FA7A40076A317 /* Resources */,
+				F840F15C111FA7A40076A317 /* Sources */,
+				F840F15D111FA7A40076A317 /* Frameworks */,
+				F840F15E111FA7A40076A317 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XMLDigesterTest;
+			productName = XMLDigesterTest;
+			productReference = F840F160111FA7A40076A317 /* XMLDigesterTest.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "XMLDigester" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* XMLDigester */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* XMLDigester */,
+				F840F15F111FA7A40076A317 /* XMLDigesterTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F840F15B111FA7A40076A317 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F840F176111FA91A0076A317 /* XMLDigesterTest.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F840F15E111FA7A40076A317 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F840F137111F8E570076A317 /* XMLDigester.m in Sources */,
+				F840F139111F8E570076A317 /* XMLDigesterCallMethodRule.m in Sources */,
+				F840F13B111F8E570076A317 /* XMLDigesterCallMethodWithAttributeRule.m in Sources */,
+				F840F13D111F8E570076A317 /* XMLDigesterCallMethodWithElementBodyRule.m in Sources */,
+				F840F13F111F8E570076A317 /* XMLDigesterCallParamRule.m in Sources */,
+				F840F141111F8E570076A317 /* XMLDigesterObjectCreateRule.m in Sources */,
+				F840F143111F8E570076A317 /* XMLDigesterRule.m in Sources */,
+				F840F145111F8E570076A317 /* XMLDigesterSetNextRule.m in Sources */,
+				F840F147111F8E570076A317 /* XMLDigesterSetPropertiesRule.m in Sources */,
+				F840F149111F8E570076A317 /* XMLDigesterSetPropertyRule.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F840F15C111FA7A40076A317 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F840F16C111FA7E60076A317 /* XMLDigesterTest.m in Sources */,
+				F840F18A111FAB400076A317 /* XMLDigester.m in Sources */,
+				F840F18D111FAB4F0076A317 /* XMLDigesterCallMethodRule.m in Sources */,
+				F840F18E111FAB4F0076A317 /* XMLDigesterCallMethodWithAttributeRule.m in Sources */,
+				F840F18F111FAB4F0076A317 /* XMLDigesterCallMethodWithElementBodyRule.m in Sources */,
+				F840F190111FAB4F0076A317 /* XMLDigesterCallParamRule.m in Sources */,
+				F840F191111FAB4F0076A317 /* XMLDigesterObjectCreateRule.m in Sources */,
+				F840F192111FAB4F0076A317 /* XMLDigesterRule.m in Sources */,
+				F840F193111FAB4F0076A317 /* XMLDigesterSetNextRule.m in Sources */,
+				F840F194111FAB4F0076A317 /* XMLDigesterSetPropertiesRule.m in Sources */,
+				F840F195111FAB4F0076A317 /* XMLDigesterSetPropertyRule.m in Sources */,
+				F840F1CF111FB2060076A317 /* Person.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/XMLDigester.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = XMLDigester_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = XMLDigester;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/XMLDigester.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = XMLDigester_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = XMLDigester;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1.3;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1.3;
+			};
+			name = Release;
+		};
+		F840F162111FA7A40076A317 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "XMLDigesterTest-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = XMLDigesterTest;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		F840F163111FA7A40076A317 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				INFOPLIST_FILE = "XMLDigesterTest-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = XMLDigesterTest;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "XMLDigester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "XMLDigester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F840F164111FA7A50076A317 /* Build configuration list for PBXNativeTarget "XMLDigesterTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F840F162111FA7A40076A317 /* Debug */,
+				F840F163111FA7A40076A317 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

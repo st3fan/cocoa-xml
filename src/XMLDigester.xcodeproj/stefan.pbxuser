@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	0867D690FE84028FC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeTarget = F840F15F111FA7A40076A317 /* XMLDigesterTest */;
+		addToTargets = (
+			F840F15F111FA7A40076A317 /* XMLDigesterTest */,
+		);
+		breakpoints = (
+		);
+		codeSenseManager = F840F111111F8E2B0076A317 /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					892,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					494,
+					60,
+					20,
+					48.16259765625,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 288048343;
+			PBXWorkspaceStateSaveDate = 288048343;
+		};
+		perUserProjectItems = {
+			F840F198111FABDB0076A317 = F840F198111FABDB0076A317 /* PBXTextBookmark */;
+			F840F199111FABDB0076A317 = F840F199111FABDB0076A317 /* PBXTextBookmark */;
+			F840F19A111FABDB0076A317 = F840F19A111FABDB0076A317 /* PBXTextBookmark */;
+			F840F19B111FABDB0076A317 = F840F19B111FABDB0076A317 /* PBXTextBookmark */;
+			F840F19C111FABDB0076A317 = F840F19C111FABDB0076A317 /* PBXTextBookmark */;
+			F840F1A0111FABDB0076A317 = F840F1A0111FABDB0076A317 /* PBXTextBookmark */;
+			F840F1A1111FABDB0076A317 = F840F1A1111FABDB0076A317 /* PBXTextBookmark */;
+			F840F1A2111FABDB0076A317 = F840F1A2111FABDB0076A317 /* PBXTextBookmark */;
+			F840F1A3111FABDB0076A317 = F840F1A3111FABDB0076A317 /* PBXTextBookmark */;
+			F840F1A5111FABDB0076A317 = F840F1A5111FABDB0076A317 /* PBXTextBookmark */;
+			F840F1A6111FABDB0076A317 = F840F1A6111FABDB0076A317 /* PBXTextBookmark */;
+			F840F1A7111FABDB0076A317 = F840F1A7111FABDB0076A317 /* PlistBookmark */;
+			F840F1AC111FABDB0076A317 = F840F1AC111FABDB0076A317 /* PBXTextBookmark */;
+			F840F1AD111FABDB0076A317 = F840F1AD111FABDB0076A317 /* PBXTextBookmark */;
+			F840F1B4111FAEDB0076A317 = F840F1B4111FAEDB0076A317 /* PBXTextBookmark */;
+			F840F1F8111FB73D0076A317 = F840F1F8111FB73D0076A317 /* PBXTextBookmark */;
+			F840F23F111FBF480076A317 = F840F23F111FBF480076A317 /* PBXTextBookmark */;
+			F840F240111FBF480076A317 = F840F240111FBF480076A317 /* PBXTextBookmark */;
+			F840F241111FBF480076A317 = F840F241111FBF480076A317 /* PBXTextBookmark */;
+			F840F242111FBF480076A317 = F840F242111FBF480076A317 /* PBXTextBookmark */;
+			F840F243111FBF480076A317 = F840F243111FBF480076A317 /* PBXTextBookmark */;
+			F840F244111FBF480076A317 = F840F244111FBF480076A317 /* PBXTextBookmark */;
+			F840F245111FBF480076A317 = F840F245111FBF480076A317 /* PBXTextBookmark */;
+			F840F246111FBF480076A317 = F840F246111FBF480076A317 /* PBXTextBookmark */;
+			F8FE8D98112B44E100D2BA6F /* PBXTextBookmark */ = F8FE8D98112B44E100D2BA6F /* PBXTextBookmark */;
+		};
+		sourceControlManager = F840F110111F8E2B0076A317 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	D2AAC07D0554694100DB518D /* XMLDigester */ = {
+		activeExec = 0;
+	};
+	F840F110111F8E2B0076A317 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	F840F111111F8E2B0076A317 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	F840F120111F8E570076A317 /* XMLDigester.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1070, 780}}";
+			sepNavSelRange = "{1110, 26}";
+			sepNavVisRange = "{60, 1253}";
+		};
+	};
+	F840F121111F8E570076A317 /* XMLDigester.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {768, 2171}}";
+			sepNavSelRange = "{922, 0}";
+			sepNavVisRange = "{0, 1238}";
+		};
+	};
+	F840F122111F8E570076A317 /* XMLDigesterCallMethodRule.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {712, 631}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1345}";
+		};
+	};
+	F840F123111F8E570076A317 /* XMLDigesterCallMethodRule.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {768, 949}}";
+			sepNavSelRange = "{2196, 0}";
+			sepNavVisRange = "{1158, 1073}";
+		};
+	};
+	F840F126111F8E570076A317 /* XMLDigesterCallMethodWithElementBodyRule.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {712, 631}}";
+			sepNavSelRange = "{998, 0}";
+			sepNavVisRange = "{0, 1369}";
+		};
+	};
+	F840F127111F8E570076A317 /* XMLDigesterCallMethodWithElementBodyRule.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {712, 790}}";
+			sepNavSelRange = "{1512, 0}";
+			sepNavVisRange = "{0, 1512}";
+		};
+	};
+	F840F128111F8E570076A317 /* XMLDigesterCallParamRule.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {712, 631}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1367}";
+		};
+	};
+	F840F129111F8E570076A317 /* XMLDigesterCallParamRule.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {712, 858}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1679}";
+		};
+	};
+	F840F12A111F8E570076A317 /* XMLDigesterObjectCreateRule.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {712, 565}}";
+			sepNavSelRange = "{925, 0}";
+			sepNavVisRange = "{0, 1360}";
+		};
+	};
+	F840F12B111F8E570076A317 /* XMLDigesterObjectCreateRule.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {712, 624}}";
+			sepNavSelRange = "{1151, 0}";
+			sepNavVisRange = "{133, 1451}";
+		};
+	};
+	F840F12C111F8E570076A317 /* XMLDigesterRule.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {712, 631}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1267}";
+		};
+	};
+	F840F12D111F8E570076A317 /* XMLDigesterRule.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {712, 689}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1441}";
+		};
+	};
+	F840F12E111F8E570076A317 /* XMLDigesterSetNextRule.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1070, 793}}";
+			sepNavSelRange = "{1408, 0}";
+			sepNavVisRange = "{1136, 1255}";
+		};
+	};
+	F840F12F111F8E570076A317 /* XMLDigesterSetNextRule.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {712, 637}}";
+			sepNavSelRange = "{1594, 0}";
+			sepNavVisRange = "{60, 1534}";
+		};
+	};
+	F840F130111F8E570076A317 /* XMLDigesterSetPropertiesRule.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {712, 631}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1268}";
+		};
+	};
+	F840F131111F8E570076A317 /* XMLDigesterSetPropertiesRule.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1070, 598}}";
+			sepNavSelRange = "{1498, 0}";
+			sepNavVisRange = "{63, 1435}";
+		};
+	};
+	F840F132111F8E570076A317 /* XMLDigesterSetPropertyRule.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1070, 481}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{63, 1272}";
+		};
+	};
+	F840F133111F8E570076A317 /* XMLDigesterSetPropertyRule.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1070, 897}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{1267, 643}";
+		};
+	};
+	F840F15F111FA7A40076A317 /* XMLDigesterTest */ = {
+		activeExec = 0;
+	};
+	F840F16A111FA7E60076A317 /* XMLDigesterTest.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1070, 547}}";
+			sepNavSelRange = "{135, 0}";
+			sepNavVisRange = "{0, 197}";
+		};
+	};
+	F840F16B111FA7E60076A317 /* XMLDigesterTest.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1070, 1807}}";
+			sepNavSelRange = "{5710, 0}";
+			sepNavVisRange = "{3991, 1723}";
+			sepNavWindowFrame = "{{15, 4}, {1072, 874}}";
+		};
+	};
+	F840F175111FA91A0076A317 /* XMLDigesterTest.xml */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1070, 547}}";
+			sepNavSelRange = "{557, 0}";
+			sepNavVisRange = "{0, 594}";
+		};
+	};
+	F840F198111FABDB0076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F127111F8E570076A317 /* XMLDigesterCallMethodWithElementBodyRule.m */;
+		name = "XMLDigesterCallMethodWithElementBodyRule.m: 44";
+		rLen = 0;
+		rLoc = 1512;
+		rType = 0;
+		vrLen = 1512;
+		vrLoc = 0;
+	};
+	F840F199111FABDB0076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F126111F8E570076A317 /* XMLDigesterCallMethodWithElementBodyRule.h */;
+		name = "XMLDigesterCallMethodWithElementBodyRule.h: 25";
+		rLen = 0;
+		rLoc = 998;
+		rType = 0;
+		vrLen = 1369;
+		vrLoc = 0;
+	};
+	F840F19A111FABDB0076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F122111F8E570076A317 /* XMLDigesterCallMethodRule.h */;
+		name = "XMLDigesterCallMethodRule.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1345;
+		vrLoc = 0;
+	};
+	F840F19B111FABDB0076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F128111F8E570076A317 /* XMLDigesterCallParamRule.h */;
+		name = "XMLDigesterCallParamRule.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1367;
+		vrLoc = 0;
+	};
+	F840F19C111FABDB0076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F129111F8E570076A317 /* XMLDigesterCallParamRule.m */;
+		name = "XMLDigesterCallParamRule.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1679;
+		vrLoc = 0;
+	};
+	F840F1A0111FABDB0076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F130111F8E570076A317 /* XMLDigesterSetPropertiesRule.h */;
+		name = "XMLDigesterSetPropertiesRule.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1268;
+		vrLoc = 0;
+	};
+	F840F1A1111FABDB0076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F12C111F8E570076A317 /* XMLDigesterRule.h */;
+		name = "XMLDigesterRule.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1267;
+		vrLoc = 0;
+	};
+	F840F1A2111FABDB0076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F12D111F8E570076A317 /* XMLDigesterRule.m */;
+		name = "XMLDigesterRule.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1441;
+		vrLoc = 0;
+	};
+	F840F1A3111FABDB0076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F12F111F8E570076A317 /* XMLDigesterSetNextRule.m */;
+		name = "XMLDigesterSetNextRule.m: 49";
+		rLen = 0;
+		rLoc = 1594;
+		rType = 0;
+		vrLen = 1534;
+		vrLoc = 60;
+	};
+	F840F1A5111FABDB0076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F12A111F8E570076A317 /* XMLDigesterObjectCreateRule.h */;
+		name = "XMLDigesterObjectCreateRule.h: 22";
+		rLen = 0;
+		rLoc = 925;
+		rType = 0;
+		vrLen = 1360;
+		vrLoc = 0;
+	};
+	F840F1A6111FABDB0076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F12B111F8E570076A317 /* XMLDigesterObjectCreateRule.m */;
+		name = "XMLDigesterObjectCreateRule.m: 32";
+		rLen = 0;
+		rLoc = 1151;
+		rType = 0;
+		vrLen = 1451;
+		vrLoc = 133;
+	};
+	F840F1A7111FABDB0076A317 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = F840F1A8111FABDB0076A317 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/stefan/Development/Projects/Github/cocoa-xml/src/build/Debug-iphonesimulator/XMLDigesterTest.octest/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	F840F1A8111FABDB0076A317 /* Info.plist */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = file.bplist;
+		name = Info.plist;
+		path = "/Users/stefan/Development/Projects/Github/cocoa-xml/src/build/Debug-iphonesimulator/XMLDigesterTest.octest/Info.plist";
+		sourceTree = "<absolute>";
+	};
+	F840F1AC111FABDB0076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F121111F8E570076A317 /* XMLDigester.m */;
+		name = "XMLDigester.m: 23";
+		rLen = 0;
+		rLoc = 922;
+		rType = 0;
+		vrLen = 1238;
+		vrLoc = 0;
+	};
+	F840F1AD111FABDB0076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F123111F8E570076A317 /* XMLDigesterCallMethodRule.m */;
+		name = "XMLDigesterCallMethodRule.m: 63";
+		rLen = 0;
+		rLoc = 2196;
+		rType = 0;
+		vrLen = 1073;
+		vrLoc = 1158;
+	};
+	F840F1B4111FAEDB0076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F1B5111FAEDB0076A317 /* XMLDigesterText.xml */;
+		name = "XMLDigesterText.xml: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 242;
+		vrLoc = 0;
+	};
+	F840F1B5111FAEDB0076A317 /* XMLDigesterText.xml */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.xml;
+		name = XMLDigesterText.xml;
+		path = "/Users/stefan/Development/Projects/Github/cocoa-xml/src/build/Debug-iphonesimulator/XMLDigesterTest.octest/XMLDigesterText.xml";
+		sourceTree = "<absolute>";
+	};
+	F840F1CD111FB2060076A317 /* Person.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1070, 547}}";
+			sepNavSelRange = "{311, 0}";
+			sepNavVisRange = "{0, 318}";
+		};
+	};
+	F840F1CE111FB2060076A317 /* Person.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1070, 547}}";
+			sepNavSelRange = "{162, 0}";
+			sepNavVisRange = "{0, 168}";
+			sepNavWindowFrame = "{{14, 4}, {1072, 874}}";
+		};
+	};
+	F840F1F8111FB73D0076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F132111F8E570076A317 /* XMLDigesterSetPropertyRule.h */;
+		name = "XMLDigesterSetPropertyRule.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1272;
+		vrLoc = 63;
+	};
+	F840F23F111FBF480076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F120111F8E570076A317 /* XMLDigester.h */;
+		name = "XMLDigester.h: 27";
+		rLen = 26;
+		rLoc = 1110;
+		rType = 0;
+		vrLen = 1253;
+		vrLoc = 60;
+	};
+	F840F240111FBF480076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F175111FA91A0076A317 /* XMLDigesterTest.xml */;
+		name = "XMLDigesterTest.xml: 22";
+		rLen = 0;
+		rLoc = 557;
+		rType = 0;
+		vrLen = 594;
+		vrLoc = 0;
+	};
+	F840F241111FBF480076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F16A111FA7E60076A317 /* XMLDigesterTest.h */;
+		name = "XMLDigesterTest.h: 9";
+		rLen = 0;
+		rLoc = 135;
+		rType = 0;
+		vrLen = 197;
+		vrLoc = 0;
+	};
+	F840F242111FBF480076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F1CD111FB2060076A317 /* Person.h */;
+		name = "Person.h: 14";
+		rLen = 0;
+		rLoc = 311;
+		rType = 0;
+		vrLen = 318;
+		vrLoc = 0;
+	};
+	F840F243111FBF480076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F1CE111FB2060076A317 /* Person.m */;
+		name = "Person.m: 9";
+		rLen = 0;
+		rLoc = 162;
+		rType = 0;
+		vrLen = 168;
+		vrLoc = 0;
+	};
+	F840F244111FBF480076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F16B111FA7E60076A317 /* XMLDigesterTest.m */;
+		name = "XMLDigesterTest.m: 147";
+		rLen = 0;
+		rLoc = 5710;
+		rType = 0;
+		vrLen = 1723;
+		vrLoc = 3991;
+	};
+	F840F245111FBF480076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F131111F8E570076A317 /* XMLDigesterSetPropertiesRule.m */;
+		name = "XMLDigesterSetPropertiesRule.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1492;
+		vrLoc = 0;
+	};
+	F840F246111FBF480076A317 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F131111F8E570076A317 /* XMLDigesterSetPropertiesRule.m */;
+		name = "XMLDigesterSetPropertiesRule.m: 46";
+		rLen = 0;
+		rLoc = 1498;
+		rType = 0;
+		vrLen = 1435;
+		vrLoc = 63;
+	};
+	F8FE8D98112B44E100D2BA6F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F840F131111F8E570076A317 /* XMLDigesterSetPropertiesRule.m */;
+		name = "XMLDigesterSetPropertiesRule.m: 46";
+		rLen = 0;
+		rLoc = 1498;
+		rType = 0;
+		vrLen = 1435;
+		vrLoc = 63;
+	};
+}

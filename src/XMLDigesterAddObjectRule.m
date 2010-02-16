@@ -17,20 +17,36 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
-#import "XMLDigesterRule.h"
+#import "XMLDigesterAddObjectRule.h"
+#import "XMLDigester.h"
 
-/**
- * Rule implementation that calls a method of the object at the top
- * of the stack with one argument, the element text body.
- */
+@implementation XMLDigesterAddObjectRule
 
-@class XMLDigester;
-
-@interface XMLDigesterCallMethodWithElementBodyRule : XMLDigesterRule {
-   @private
-      SEL selector_;
+- (id) initWithDigester: (XMLDigester*) digester property: (NSString*) property
+{
+   if ((self = [super initWithDigester: digester]) != nil) {
+      property_ = [property retain];
+   }
+   return self;
 }
-- (id) initWithDigester: (XMLDigester*) digester selector: (SEL) selector;
-+ (id) callMethodWithElementBodyRuleWithDigester: (XMLDigester*) digester selector: (SEL) selector;
+
++ (id) addObjectRuleWithDigester: (XMLDigester*) digester property: (NSString*) property
+{
+   return [[[self alloc] initWithDigester: digester property: property] autorelease];
+}
+
+- (void) didEndElement: (NSString*) element
+{
+   id child = [[self digester] peekObjectAtIndex: 0];
+   id parent = [[self digester] peekObjectAtIndex: 1];
+
+   if (child != nil && parent != nil)
+   {
+	  id propertyValue = [parent valueForKey: property_];
+	  if (propertyValue != nil) {
+		[propertyValue performSelector: @selector(addObject:) withObject: child];
+	}
+   }
+}
+
 @end

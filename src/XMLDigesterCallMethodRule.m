@@ -50,7 +50,7 @@
    id object = [[self digester] peekObjectAtIndex: 0];
 
    NSMethodSignature* methodSignature = [object methodSignatureForSelector: selector_];
-   if (methodSignature)
+   if (methodSignature != nil)
    {
       NSInvocation* invocation = [NSInvocation invocationWithMethodSignature: methodSignature];
       [invocation setTarget: object];

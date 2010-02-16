@@ -20,10 +20,6 @@
 #import <Foundation/Foundation.h>
 
 #import "XMLDigester.h"
-#import "XMLDigesterObjectCreateRule.h"
-#import "XMLDigesterCallMethodWithElementBodyRule.h"
-#import "XMLDigesterCallMethodRule.h"
-#import "XMLDigesterCallParamRule.h"
 
 @implementation XMLDigester
 
