@@ -22,17 +22,17 @@
 
 @implementation XMLDigesterAddObjectRule
 
-- (id) initWithDigester: (XMLDigester*) digester property: (NSString*) property
+- (id) initWithProperty: (NSString*) property
 {
-   if ((self = [super initWithDigester: digester]) != nil) {
+   if ((self = [super init]) != nil) {
       property_ = [property retain];
    }
    return self;
 }
 
-+ (id) addObjectRuleWithDigester: (XMLDigester*) digester property: (NSString*) property
++ (id) addObjectRuleWithProperty: (NSString*) property
 {
-   return [[[self alloc] initWithDigester: digester property: property] autorelease];
+   return [[[self alloc] initWithProperty: property] autorelease];
 }
 
 - (void) didEndElement: (NSString*) element

@@ -22,17 +22,17 @@
 
 @implementation XMLDigesterCallMethodWithElementBodyRule
 
-- (id) initWithDigester: (XMLDigester*) digester selector: (SEL) selector
+- (id) initWithSelector: (SEL) selector
 {
-   if ((self = [super initWithDigester: digester]) != nil) {
+   if ((self = [super init]) != nil) {
       selector_ = selector;
    }
    return self;
 }
 
-+ (id) callMethodWithElementBodyRuleWithDigester: (XMLDigester*) digester selector: (SEL) selector
++ (id) callMethodWithElementBodyRuleWithSelector: (SEL) selector
 {
-   return [[[self alloc] initWithDigester: digester selector: selector] autorelease];
+   return [[[self alloc] initWithSelector: selector] autorelease];
 }
 
 - (void) didBody: (NSString*) body

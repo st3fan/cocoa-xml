@@ -42,6 +42,8 @@
 		F840F194111FAB4F0076A317 /* XMLDigesterSetPropertiesRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F131111F8E570076A317 /* XMLDigesterSetPropertiesRule.m */; };
 		F840F195111FAB4F0076A317 /* XMLDigesterSetPropertyRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F133111F8E570076A317 /* XMLDigesterSetPropertyRule.m */; };
 		F840F1CF111FB2060076A317 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F840F1CE111FB2060076A317 /* Person.m */; };
+		F8FE8DA2112B496200D2BA6F /* XMLDigesterAddObjectRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FE8DA1112B496200D2BA6F /* XMLDigesterAddObjectRule.m */; };
+		F8FE8DA5112B4C2500D2BA6F /* XMLDigesterPushBodyRule.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FE8DA4112B4C2500D2BA6F /* XMLDigesterPushBodyRule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +77,10 @@
 		F840F175111FA91A0076A317 /* XMLDigesterTest.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = XMLDigesterTest.xml; sourceTree = "<group>"; };
 		F840F1CD111FB2060076A317 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		F840F1CE111FB2060076A317 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		F8FE8DA0112B496200D2BA6F /* XMLDigesterAddObjectRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDigesterAddObjectRule.h; sourceTree = "<group>"; };
+		F8FE8DA1112B496200D2BA6F /* XMLDigesterAddObjectRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDigesterAddObjectRule.m; sourceTree = "<group>"; };
+		F8FE8DA3112B4C2500D2BA6F /* XMLDigesterPushBodyRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDigesterPushBodyRule.h; sourceTree = "<group>"; };
+		F8FE8DA4112B4C2500D2BA6F /* XMLDigesterPushBodyRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDigesterPushBodyRule.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,24 +137,9 @@
 			children = (
 				F840F120111F8E570076A317 /* XMLDigester.h */,
 				F840F121111F8E570076A317 /* XMLDigester.m */,
-				F840F122111F8E570076A317 /* XMLDigesterCallMethodRule.h */,
-				F840F123111F8E570076A317 /* XMLDigesterCallMethodRule.m */,
-				F840F124111F8E570076A317 /* XMLDigesterCallMethodWithAttributeRule.h */,
-				F840F125111F8E570076A317 /* XMLDigesterCallMethodWithAttributeRule.m */,
-				F840F126111F8E570076A317 /* XMLDigesterCallMethodWithElementBodyRule.h */,
-				F840F127111F8E570076A317 /* XMLDigesterCallMethodWithElementBodyRule.m */,
-				F840F128111F8E570076A317 /* XMLDigesterCallParamRule.h */,
-				F840F129111F8E570076A317 /* XMLDigesterCallParamRule.m */,
-				F840F12A111F8E570076A317 /* XMLDigesterObjectCreateRule.h */,
-				F840F12B111F8E570076A317 /* XMLDigesterObjectCreateRule.m */,
 				F840F12C111F8E570076A317 /* XMLDigesterRule.h */,
 				F840F12D111F8E570076A317 /* XMLDigesterRule.m */,
-				F840F12E111F8E570076A317 /* XMLDigesterSetNextRule.h */,
-				F840F12F111F8E570076A317 /* XMLDigesterSetNextRule.m */,
-				F840F130111F8E570076A317 /* XMLDigesterSetPropertiesRule.h */,
-				F840F131111F8E570076A317 /* XMLDigesterSetPropertiesRule.m */,
-				F840F132111F8E570076A317 /* XMLDigesterSetPropertyRule.h */,
-				F840F133111F8E570076A317 /* XMLDigesterSetPropertyRule.m */,
+				F8FE8E0C112B86AA00D2BA6F /* Rules */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -171,6 +162,33 @@
 				F840F1CE111FB2060076A317 /* Person.m */,
 			);
 			name = Test;
+			sourceTree = "<group>";
+		};
+		F8FE8E0C112B86AA00D2BA6F /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				F8FE8DA0112B496200D2BA6F /* XMLDigesterAddObjectRule.h */,
+				F8FE8DA1112B496200D2BA6F /* XMLDigesterAddObjectRule.m */,
+				F8FE8DA3112B4C2500D2BA6F /* XMLDigesterPushBodyRule.h */,
+				F8FE8DA4112B4C2500D2BA6F /* XMLDigesterPushBodyRule.m */,
+				F840F124111F8E570076A317 /* XMLDigesterCallMethodWithAttributeRule.h */,
+				F840F125111F8E570076A317 /* XMLDigesterCallMethodWithAttributeRule.m */,
+				F840F126111F8E570076A317 /* XMLDigesterCallMethodWithElementBodyRule.h */,
+				F840F127111F8E570076A317 /* XMLDigesterCallMethodWithElementBodyRule.m */,
+				F840F128111F8E570076A317 /* XMLDigesterCallParamRule.h */,
+				F840F129111F8E570076A317 /* XMLDigesterCallParamRule.m */,
+				F840F12A111F8E570076A317 /* XMLDigesterObjectCreateRule.h */,
+				F840F12B111F8E570076A317 /* XMLDigesterObjectCreateRule.m */,
+				F840F12E111F8E570076A317 /* XMLDigesterSetNextRule.h */,
+				F840F12F111F8E570076A317 /* XMLDigesterSetNextRule.m */,
+				F840F130111F8E570076A317 /* XMLDigesterSetPropertiesRule.h */,
+				F840F131111F8E570076A317 /* XMLDigesterSetPropertiesRule.m */,
+				F840F132111F8E570076A317 /* XMLDigesterSetPropertyRule.h */,
+				F840F133111F8E570076A317 /* XMLDigesterSetPropertyRule.m */,
+				F840F122111F8E570076A317 /* XMLDigesterCallMethodRule.h */,
+				F840F123111F8E570076A317 /* XMLDigesterCallMethodRule.m */,
+			);
+			name = Rules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +330,8 @@
 				F840F194111FAB4F0076A317 /* XMLDigesterSetPropertiesRule.m in Sources */,
 				F840F195111FAB4F0076A317 /* XMLDigesterSetPropertyRule.m in Sources */,
 				F840F1CF111FB2060076A317 /* Person.m in Sources */,
+				F8FE8DA2112B496200D2BA6F /* XMLDigesterAddObjectRule.m in Sources */,
+				F8FE8DA5112B4C2500D2BA6F /* XMLDigesterPushBodyRule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

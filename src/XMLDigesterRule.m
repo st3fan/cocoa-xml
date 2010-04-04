@@ -1,5 +1,5 @@
 /*
- * (C) Copyright 2008, Stefan Arentz, Arentz Consulting.
+ * (C) Copyright 2008-2010, Stefan Arentz, Arentz Consulting.
  *
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
@@ -21,18 +21,22 @@
 
 @implementation XMLDigesterRule
 
-- (id) initWithDigester: (XMLDigester*) digester
+@synthesize digester = digester_;
+
+- (id) init
 {
    if ((self = [super init]) != nil) {
-      digester_ = [digester retain];
    }
    return self;
 }
 
-- (XMLDigester*) digester
+- (void) dealloc
 {
-   return digester_;
+	[digester_ release];
+	[super dealloc];
 }
+
+#pragma mark -
 
 - (void) didStartElement: (NSString*) elementName attributes: (NSDictionary*) attributeDict
 {

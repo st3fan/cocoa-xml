@@ -96,6 +96,8 @@
 
 - (void) addRule: (XMLDigesterRule*) rule forPattern: (NSString*) pattern;
 {
+	rule.digester = self;
+
    NSArray* path = [pattern componentsSeparatedByString: @"/"];
    
    NSMutableArray* rules = [rulesByPath_ objectForKey: path];
@@ -157,22 +159,22 @@
 
 - (void) addObjectCreateRuleWithClass: (id) class forPattern: (NSString*) pattern
 {
-   [self addRule: [XMLDigesterObjectCreateRule objectCreateRuleWithDigester: self class: class] forPattern: pattern];   
+   //[self addRule: [XMLDigesterObjectCreateRule objectCreateRuleWithClass: class] forPattern: pattern];
 }
 
 - (void) addCallMethodWithElementBodyRuleWithSelector: (SEL) selector forPattern: (NSString*) pattern
 {
-   [self addRule: [XMLDigesterCallMethodWithElementBodyRule callMethodWithElementBodyRuleWithDigester: self selector: selector] forPattern: pattern];
+   //[self addRule: [XMLDigesterCallMethodWithElementBodyRule callMethodWithElementBodyRuleWithDigester: self selector: selector] forPattern: pattern];
 }
 
 - (void) addCallMethodRuleWithSelector: (SEL) selector forPattern: (NSString*) pattern
 {
-   [self addRule: [XMLDigesterCallMethodRule callMethodRuleWithDigester: self selector: selector] forPattern: pattern];
+   //[self addRule: [XMLDigesterCallMethodRule callMethodRuleWithDigester: self selector: selector] forPattern: pattern];
 }
 
 - (void) addCallParamRuleWithParameterIndex: (NSUInteger) index forPattern: (NSString*) pattern
 {
-   [self addRule: [XMLDigesterCallParamRule callParamRuleWithDigester: self parameterIndex: index] forPattern: pattern];
+   //[self addRule: [XMLDigesterCallParamRule callParamRuleWithDigester: self parameterIndex: index] forPattern: pattern];
 }
 
 @end

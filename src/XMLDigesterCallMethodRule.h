@@ -31,6 +31,6 @@
    @private
       SEL selector_;
 }
-- (id) initWithDigester: (XMLDigester*) digester selector: (SEL) selector;
-+ (id) callMethodRuleWithDigester: (XMLDigester*) digester selector: (SEL) selector;
+- (id) initWithSelector: (SEL) selector;
++ (id) callMethodRuleWithSelector: (SEL) selector;
 @end

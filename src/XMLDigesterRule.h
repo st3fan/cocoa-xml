@@ -26,9 +26,7 @@
       XMLDigester* digester_;
 }
 
-- (id) initWithDigester: (XMLDigester*) digester;
-
-- (XMLDigester*) digester;
+@property (nonatomic,retain) XMLDigester* digester;
 
 - (void) didStartElement: (NSString*) elementName attributes: (NSDictionary*) attributeDict;
 - (void) didEndElement: (NSString*) elementName;

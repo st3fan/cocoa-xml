@@ -33,8 +33,8 @@
       Class class_;
 }
 
-- (id) initWithDigester: (XMLDigester*) digester class: (Class) class;
-+ (id) objectCreateRuleWithDigester: (XMLDigester*) digester class: (Class) class;
+- (id) initWithClass: (Class) class;
++ (id) objectCreateRuleWithClass: (Class) class;
 
 @end
 

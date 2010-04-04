@@ -22,17 +22,17 @@
 
 @implementation XMLDigesterObjectCreateRule
 
-- (id) initWithDigester: (XMLDigester*) digester class: (Class) class
+- (id) initWithClass: (Class) class
 {
-   if ((self = [super initWithDigester: digester]) != nil) {
+   if ((self = [super init]) != nil) {
       class_ = class;
    }
    return self;
 }
 
-+ (id) objectCreateRuleWithDigester: (XMLDigester*) digester class: (Class) class
++ (id) objectCreateRuleWithClass: (Class) class
 {
-   return [[[self alloc] initWithDigester: digester class: class] autorelease];
+   return [[[self alloc] initWithClass: class] autorelease];
 }
 
 - (void) didStartElement: (NSString*) elementName attributes: (NSDictionary*) attributeDict

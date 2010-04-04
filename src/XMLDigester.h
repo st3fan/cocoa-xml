@@ -25,6 +25,10 @@
 #import "XMLDigesterCallParamRule.h"
 #import "XMLDigesterSetNextRule.h"
 #import "XMLDigesterSetPropertyRule.h"
+#import "XMLDigesterAddObjectRule.h"
+#import "XMLDigesterPushBodyRule.h"
+#import "XMLDigesterCallMethodWithAttributeRule.h"
+#import "XMLDigesterSetPropertiesRule.h"
 
 @class XMLDigesterRule;
 

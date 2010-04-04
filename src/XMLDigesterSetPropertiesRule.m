@@ -22,23 +22,37 @@
 
 @implementation XMLDigesterSetPropertiesRule
 
-- (id) initWithDigester: (XMLDigester*) digester
+- (id) initWithMappings: (NSDictionary*) mappings
 {
-   if ((self = [super initWithDigester: digester]) != nil) {
+   if ((self = [super init]) != nil) {
+		mappings_ = [mappings retain];
    }
    return self;
 }
 
-+ (id) setPropertiesRuleWithDigester: (XMLDigester*) digester
+- (void) dealloc
 {
-   return [[[self alloc] initWithDigester: digester] autorelease];
+	[mappings_ release];
+	[super dealloc];
+}
+
++ (id) setPropertiesRuleWithMappings: (NSDictionary*) mappings
+{
+   return [[[self alloc] initWithMappings: mappings] autorelease];
 }
 
 - (void) didStartElement: (NSString*) element attributes: (NSDictionary*) attributes
 {
-   id object = [[self digester] peekObject];
-   for (NSString* key in attributes) {
-      [object setValue: [attributes objectForKey: key] forKey: key];
+   NSObject* object = [[self digester] peekObject];
+   for (NSString* attribute in attributes) {
+      if (mappings_ != nil) {
+		NSString* key = [mappings_ objectForKey: attribute];
+		if (key != nil) {
+			[object setValue: [attributes objectForKey: attribute] forKey: key];
+		}
+	  } else {
+		[object setValue: [attributes objectForKey: attribute] forKey: attribute];
+	  }
    }
 }
 

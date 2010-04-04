@@ -22,17 +22,17 @@
 
 @implementation XMLDigesterCallParamRule
 
-- (id) initWithDigester: (XMLDigester*) digester parameterIndex: (NSUInteger) index
+- (id) initWithParameterIndex: (NSUInteger) index
 {
-   if ((self = [super initWithDigester: digester]) != nil) {
+   if ((self = [super init]) != nil) {
       index_ = index;
    }
    return self;
 }
 
-+ (id) callParamRuleWithDigester: (XMLDigester*) digester parameterIndex: (NSUInteger) index
++ (id) callParamRuleWithParameterIndex: (NSUInteger) index
 {
-   return [[[self alloc] initWithDigester: digester parameterIndex: index] autorelease];
+   return [[[self alloc] initWithParameterIndex: index] autorelease];
 }
 
 - (void) didStartElement: (NSString*) elementName attributes: (NSDictionary*) attributeDict

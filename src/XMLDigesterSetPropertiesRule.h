@@ -28,7 +28,8 @@
 @class XMLDigester;
 
 @interface XMLDigesterSetPropertiesRule : XMLDigesterRule {
+	NSDictionary* mappings_;
 }
-- (id) initWithDigester: (XMLDigester*) digester;
-+ (id) setPropertiesRuleWithDigester: (XMLDigester*) digester;
+- (id) initWithMappings: (NSDictionary*) mappings;
++ (id) setPropertiesRuleWithMappings: (NSDictionary*) mappings;
 @end

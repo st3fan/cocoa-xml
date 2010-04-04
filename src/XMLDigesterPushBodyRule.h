@@ -1,5 +1,5 @@
 /*
- * (C) Copyright 2010, Stefan Arentz, Arentz Consulting.
+ * (C) Copyright 2008-2010, Stefan Arentz, Arentz Consulting.
  *
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
@@ -20,13 +20,14 @@
 #import <Foundation/Foundation.h>
 #import "XMLDigesterRule.h"
 
-@interface XMLDigesterCallMethodWithAttributeRule : XMLDigesterRule {
-   @private
-      SEL selector_;
-	  NSString* attribute_;
+/**
+ * Rule implementation that pushes the element body on the digester stack.
+ */
+
+@class XMLDigester;
+
+@interface XMLDigesterPushBodyRule : XMLDigesterRule {
 }
-
-- (id) initWithSelector: (SEL) selector attribute: (NSString*) attribute;
-+ (id) callMethodWithAttributeRuleWithSelector: (SEL) selector attribute: (NSString*) attribute;
-
+- (id) init;
++ (id) pushBodyRule;
 @end

@@ -55,6 +55,6 @@
    @private
       SEL selector_;
 }
-- (id) initWithDigester: (XMLDigester*) digester selector: (SEL) selector;
-+ (id) setNextRuleWithDigester: (XMLDigester*) digester selector: (SEL) selector;
+- (id) initWithSelector: (SEL) selector;
++ (id) setNextRuleWithSelector: (SEL) selector;
 @end

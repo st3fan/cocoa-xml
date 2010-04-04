@@ -1,5 +1,5 @@
 /*
- * (C) Copyright 2010, Stefan Arentz, Arentz Consulting.
+ * (C) Copyright 2008-2010, Stefan Arentz, Arentz Consulting.
  *
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
@@ -17,16 +17,26 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
-#import "XMLDigesterRule.h"
+#import "XMLDigesterPushBodyRule.h"
+#import "XMLDigester.h"
 
-@interface XMLDigesterCallMethodWithAttributeRule : XMLDigesterRule {
-   @private
-      SEL selector_;
-	  NSString* attribute_;
+@implementation XMLDigesterPushBodyRule
+
+- (id) init
+{
+   if ((self = [super init]) != nil) {
+   }
+   return self;
 }
 
-- (id) initWithSelector: (SEL) selector attribute: (NSString*) attribute;
-+ (id) callMethodWithAttributeRuleWithSelector: (SEL) selector attribute: (NSString*) attribute;
++ (id) pushBodyRule
+{
+   return [[[self alloc] init] autorelease];
+}
+
+- (void) didBody: (NSString*) body
+{
+   [[self digester] pushObject: body];
+}
 
 @end

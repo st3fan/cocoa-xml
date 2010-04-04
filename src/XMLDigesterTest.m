@@ -32,7 +32,7 @@
     XMLDigester* digester = [XMLDigester digesterWithData: xml];
 	STAssertNotNil(digester, @"Cannot create XMLDigester instance");
 	
-	[digester addRule: [XMLDigesterObjectCreateRule objectCreateRuleWithDigester: digester class: [NSMutableArray class]]
+	[digester addRule: [XMLDigesterObjectCreateRule objectCreateRuleWithClass: [NSMutableArray class]]
 		forPattern: @"people"];
 	
 	NSMutableArray* people = [digester digest];
@@ -59,15 +59,15 @@
 	STAssertNotNil(digester, @"Cannot create XMLDigester instance");
 	
 	[digester addRule:
-		[XMLDigesterObjectCreateRule objectCreateRuleWithDigester: digester class: [NSMutableArray class]]
+		[XMLDigesterObjectCreateRule objectCreateRuleWithClass: [NSMutableArray class]]
 			forPattern: @"people"];
 
 	[digester addRule:
-		[XMLDigesterObjectCreateRule objectCreateRuleWithDigester: digester class: [Person class]]
+		[XMLDigesterObjectCreateRule objectCreateRuleWithClass: [Person class]]
 			forPattern: @"people/person"];
 
 	[digester addRule:
-		[XMLDigesterSetNextRule setNextRuleWithDigester: digester selector: @selector(addObject:)]
+		[XMLDigesterSetNextRule setNextRuleWithSelector: @selector(addObject:)]
 			forPattern: @"people/person"];
 	
 	NSMutableArray* people = [digester digest];
@@ -100,27 +100,27 @@
 	STAssertNotNil(digester, @"Cannot create XMLDigester instance");
 	
 	[digester addRule:
-		[XMLDigesterObjectCreateRule objectCreateRuleWithDigester: digester class: [NSMutableArray class]]
+		[XMLDigesterObjectCreateRule objectCreateRuleWithClass: [NSMutableArray class]]
 			forPattern: @"people"];
 
 	[digester addRule:
-		[XMLDigesterObjectCreateRule objectCreateRuleWithDigester: digester class: [Person class]]
+		[XMLDigesterObjectCreateRule objectCreateRuleWithClass: [Person class]]
 			forPattern: @"people/person"];
 
 	[digester addRule:
-		[XMLDigesterSetPropertyRule setPropertyRuleWithDigester: digester]
+		[XMLDigesterSetPropertyRule setPropertyRule]
 			forPattern: @"people/person/name"];
 
 	[digester addRule:
-		[XMLDigesterSetPropertyRule setPropertyRuleWithDigester: digester name: @"cityOfBirth"]
+		[XMLDigesterSetPropertyRule setPropertyRuleWithName: @"cityOfBirth"]
 			forPattern: @"people/person/city-of-birth"];
 
 	[digester addRule:
-		[XMLDigesterSetPropertyRule setPropertyRuleWithDigester: digester]
+		[XMLDigesterSetPropertyRule setPropertyRule]
 			forPattern: @"people/person/luckyNumber"];
 
 	[digester addRule:
-		[XMLDigesterSetNextRule setNextRuleWithDigester: digester selector: @selector(addObject:)]
+		[XMLDigesterSetNextRule setNextRuleWithSelector: @selector(addObject:)]
 			forPattern: @"people/person"];
 	
 	NSMutableArray* people = [digester digest];
@@ -141,6 +141,41 @@
 		NSLog(@"===> %@", [person cityOfBirth]);
 		STAssertTrue([[person cityOfBirth] isEqualToString: @"Liverpool"], @"Object at index %d does not have correct cityOfBirth", i);
 		STAssertTrue([person.luckyNumber intValue] == (i+1) * 10, @"Object at index %d does not have correct luckyNumber", i);
+	}
+}
+
+/**
+ * This test tries to collect all city-of-birth elements using a wildcard path expression.
+ */
+
+- (void) testWildcards
+{
+	NSString* path = [[NSBundle bundleForClass: [self class]] pathForResource:@"XMLDigesterTest" ofType:@"xml"];
+	STAssertNotNil(path, @"Cannot find path to XMLDigesterTest.xml");
+
+	NSData* xml = [NSData dataWithContentsOfFile: path];
+	STAssertNotNil(xml, @"Cannot load XML data");
+
+	//
+
+    XMLDigester* digester = [XMLDigester digesterWithData: xml];
+	STAssertNotNil(digester, @"Cannot create XMLDigester instance");
+	
+	[digester pushObject: [NSMutableArray array]];
+	
+	[digester addRule:
+		[XMLDigesterCallMethodWithElementBodyRule callMethodWithElementBodyRuleWithSelector: @selector(addObject:)]
+			forPattern: @"**/city-of-birth"];
+	
+	NSMutableArray* cities = [digester digest];
+	STAssertNotNil(cities, @"Digester returned nil object");
+	STAssertTrue([cities isKindOfClass: [NSMutableArray class]], @"Top level digester object is not an NSMutableArray");
+	STAssertTrue([cities count] == 4, @"Returned array should contain 4 items");
+
+	for (NSUInteger i = 0; i < 4; i++)
+	{
+		NSString* string = [cities objectAtIndex: i];
+		STAssertTrue([string isKindOfClass: [NSString class]], @"Object at index %d should be a NSString", i);
 	}
 }
 

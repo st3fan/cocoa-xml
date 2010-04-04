@@ -22,18 +22,20 @@
 
 @implementation XMLDigesterSetNextRule
 
-- (id) initWithDigester: (XMLDigester*) digester selector: (SEL) selector
+- (id) initWithSelector: (SEL) selector
 {
-   if ((self = [super initWithDigester: digester]) != nil) {
+   if ((self = [super init]) != nil) {
       selector_ = selector;
    }
    return self;
 }
 
-+ (id) setNextRuleWithDigester: (XMLDigester*) digester selector: (SEL) selector
++ (id) setNextRuleWithSelector: (SEL) selector
 {
-   return [[[self alloc] initWithDigester: digester selector: selector] autorelease];
+   return [[[self alloc] initWithSelector: selector] autorelease];
 }
+
+#pragma mark -
 
 - (void) didEndElement: (NSString*) element
 {

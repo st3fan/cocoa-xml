@@ -22,9 +22,9 @@
 
 @implementation XMLDigesterCallMethodWithAttributeRule
 
-- (id) initWithDigester: (XMLDigester*) digester selector: (SEL) selector attribute: (NSString*) attribute
+- (id) initWithSelector: (SEL) selector attribute: (NSString*) attribute
 {
-   if ((self = [super initWithDigester: digester]) != nil) {
+   if ((self = [super init]) != nil) {
       selector_ = selector;
 	  attribute_ = [attribute retain];
    }
@@ -37,9 +37,9 @@
 	[super dealloc];
 }
 
-+ (id) callMethodWithAttributeRuleWithDigester: (XMLDigester*) digester selector: (SEL) selector attribute: (NSString*) attribute
++ (id) callMethodWithAttributeRuleWithSelector: (SEL) selector attribute: (NSString*) attribute
 {
-   return [[[self alloc] initWithDigester: digester selector: selector attribute: attribute] autorelease];
+   return [[[self alloc] initWithSelector: selector attribute: attribute] autorelease];
 }
 
 - (void) didStartElement: (NSString*) element attributes: (NSDictionary*) attributes

@@ -31,6 +31,6 @@
    @private
       NSUInteger index_;
 }
-- (id) initWithDigester: (XMLDigester*) digester parameterIndex: (NSUInteger) index;
-+ (id) callParamRuleWithDigester: (XMLDigester*) digester parameterIndex: (NSUInteger) index;
+- (id) initWithParameterIndex: (NSUInteger) index;
++ (id) callParamRuleWithParameterIndex: (NSUInteger) index;
 @end

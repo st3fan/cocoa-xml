@@ -28,10 +28,10 @@
     NSString* body_;
 }
 
-+ (id) setPropertyRuleWithDigester: (XMLDigester*) digester;
-+ (id) setPropertyRuleWithDigester: (XMLDigester*) digester name: (NSString*) name;
++ (id) setPropertyRule;
++ (id) setPropertyRuleWithName: (NSString*) name;
 
-- (id) initWithDigester: (XMLDigester*) digester;
-- (id) initWithDigester: (XMLDigester*) digester name: (NSString*) name;
+- (id) init;
+- (id) initWithName: (NSString*) name;
 
 @end

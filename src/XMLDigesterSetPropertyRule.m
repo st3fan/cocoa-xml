@@ -22,26 +22,26 @@
 
 @implementation XMLDigesterSetPropertyRule
 
-+ (id) setPropertyRuleWithDigester: (XMLDigester*) digester;
++ (id) setPropertyRule
 {
-   return [[[self alloc] initWithDigester: digester] autorelease];
+   return [[[self alloc] init] autorelease];
 }
 
-+ (id) setPropertyRuleWithDigester: (XMLDigester*) digester name: (NSString*) name
++ (id) setPropertyRuleWithName: (NSString*) name
 {
-   return [[[self alloc] initWithDigester: digester name: name] autorelease];
+   return [[[self alloc] initWithName: name] autorelease];
 }
 
-- (id) initWithDigester: (XMLDigester*) digester
+- (id) init
 {
-   if ((self = [super initWithDigester: digester]) != nil) {
+   if ((self = [super init]) != nil) {
    }
    return self;
 }
 
-- (id) initWithDigester: (XMLDigester*) digester name: (NSString*) name
+- (id) initWithName: (NSString*) name
 {
-   if ((self = [super initWithDigester: digester]) != nil) {
+   if ((self = [super init]) != nil) {
        name_ = [name retain];
    }
    return self;
@@ -53,6 +53,8 @@
     [name_ release];
     [super dealloc];
 }
+
+#pragma mark -
 
 - (void) didBody: (NSString*) body
 {

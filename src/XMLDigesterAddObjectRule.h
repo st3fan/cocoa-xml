@@ -32,6 +32,6 @@
    @private
       NSString* property_;
 }
-- (id) initWithDigester: (XMLDigester*) digester property: (NSString*) property;
-+ (id) addObjectRuleWithDigester: (XMLDigester*) digester property: (NSString*) property;
+- (id) initWithProperty: (NSString*) property;
++ (id) addObjectRuleWithProperty: (NSString*) property;
 @end
